@@ -40,7 +40,7 @@ npm run build      # vérification des types + build de production dans dist/
 - Repasser sur une borne de la chaîne ferme le polygone des bornes situées entre les deux passages (3 bornes minimum). La chaîne repart de cette borne.
 - Dégâts = 40 × √(4 / surface), bornés entre 10 et 120. Surface calculée selon la règle pair-impair, donc exacte aussi pour un tracé croisé.
 - Chaque borne de la boucle surchauffe 4 s (hachures + compte à rebours).
-- Câble de 10 cases : au-delà il rompt. Il vibre puis clignote à 80 %.
+- Câble de 14 cases (10 dans le document de référence, allongé après test) : au-delà il rompt. Il vibre puis clignote à 80 %.
 - Les Coupe-fils foncent sur le câble exposé et le coupent au contact.
 - Piquet : borne temporaire de 6 s, recharge 8 s.
 - Une arène dure 75 s.

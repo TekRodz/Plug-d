@@ -13,7 +13,7 @@
     "invulnSec": 0.7
   },
   "cable": {
-    "maxLength": 10,
+    "maxLength": 14,
     "tensionWarnRatio": 0.8
   },
   "pylon": {

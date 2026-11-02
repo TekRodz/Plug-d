@@ -123,8 +123,14 @@ describe('fermeture dans la simulation', () => {
     visit(0);
     visit(1);
     const p = world.players[0]!;
+    // Juste sous la limite : 2 + 11 = 13 ≤ 14.
     p.x = 6;
-    p.y = 18; // 2 + 10 > 10
+    p.y = 19;
+    world.step([IDLE_INPUT]);
+    expect(p.chain.nodes).toHaveLength(2);
+    // Au-delà : 2 + √(5,5² + 11,5²) ≈ 14,7 > 14.
+    p.x = 0.5;
+    p.y = 19.5;
     world.step([IDLE_INPUT]);
     expect(world.events.some((e) => e.type === 'chainBroken' && e.reason === 'length')).toBe(true);
     expect(p.chain.nodes).toEqual([]);

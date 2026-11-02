@@ -624,7 +624,7 @@ export class GameScene extends Phaser.Scene {
           'ce qui est dedans grille.',
           '',
           'Petite boucle = gros dégâts.',
-          'Câble : 10 cases max.',
+          `Câble : ${w.t.cable.maxLength} cases max.`,
           'Les Coupe-fils ✕ tranchent le câble.',
           'Survis 75 secondes.',
           '',
