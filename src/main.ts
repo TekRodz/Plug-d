@@ -3,12 +3,19 @@ import { GameScene } from './render/GameScene';
 
 /** Rendu net sur écrans haute densité : le canvas est en px physiques, affiché à 1/dpr. */
 const dpr = Math.min(window.devicePixelRatio || 1, 2);
-const size = () => ({ w: Math.round(window.innerWidth * dpr), h: Math.round(window.innerHeight * dpr) });
+const parent = document.getElementById('game') ?? document.body;
+/** Taille du conteneur (respecte les zones sûres), à défaut celle de la fenêtre. */
+const size = () => {
+  const r = parent.getBoundingClientRect();
+  const cw = r.width || window.innerWidth;
+  const ch = r.height || window.innerHeight;
+  return { w: Math.round(cw * dpr), h: Math.round(ch * dpr) };
+};
 const { w, h } = size();
 
 const game = new Phaser.Game({
   type: Phaser.AUTO,
-  parent: 'game',
+  parent,
   backgroundColor: '#14315C',
   scale: { mode: Phaser.Scale.NONE, width: w, height: h, zoom: 1 / dpr },
   render: { antialias: true, roundPixels: false },
