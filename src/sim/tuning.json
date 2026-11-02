@@ -1,0 +1,51 @@
+{
+  "tickRate": 60,
+  "arena": {
+    "width": 12,
+    "height": 20,
+    "durationSec": 75,
+    "wallMargin": 0.4
+  },
+  "player": {
+    "speed": 4.2,
+    "radius": 0.35,
+    "maxHp": 100,
+    "invulnSec": 0.7
+  },
+  "cable": {
+    "maxLength": 10,
+    "tensionWarnRatio": 0.8
+  },
+  "pylon": {
+    "captureRadius": 0.6,
+    "cooldownSec": 4,
+    "minLoopPylons": 3
+  },
+  "discharge": {
+    "baseDamage": 40,
+    "referenceArea": 4,
+    "minDamage": 10,
+    "maxDamage": 120
+  },
+  "stake": {
+    "cooldownSec": 8,
+    "lifetimeSec": 6
+  },
+  "preview": {
+    "radius": 1.8
+  },
+  "enemies": {
+    "crawler": { "hp": 20, "speed": 1.5, "radius": 0.32, "contactDamage": 8 },
+    "cutter": { "hp": 30, "speed": 2.3, "radius": 0.3, "contactDamage": 5 }
+  },
+  "waves": {
+    "startIntervalSec": 1.4,
+    "endIntervalSec": 0.35,
+    "cutterFromSec": 12,
+    "cutterChance": 0.22,
+    "burstEverySec": 15,
+    "burstSize": 7,
+    "maxEnemies": 200,
+    "minSpawnDistance": 4
+  }
+}
